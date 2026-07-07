@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "lastRunAt": "2026-07-03T15:00:00+08:00",
+  "lastPlatformVersion": "v1.4",
+  "files": [
+    {
+      "path": "会议纪要/20260701智慧芽H2会议.txt",
+      "lastWriteTime": "2026-07-03T14:01:47.4318708+08:00",
+      "size": 196982,
+      "sha256": "cd26f9e5f5de25d572a3aec6c3c9cb137d758e5148cb87f3471f0c254eb7e839",
+      "status": "processed"
+    },
+    {
+      "path": "会议纪要/20260702入职培训（阿喆.txt",
+      "lastWriteTime": "2026-07-03T14:03:57.5733747+08:00",
+      "size": 58242,
+      "sha256": "d45afe561f56402aab960d2ddd8ae0a420a11ffb2809968c3cc6885c5f74eb1f",
+      "status": "processed"
+    },
+    {
+      "path": "会议纪要/20260703产品理解培训Adom.txt",
+      "lastWriteTime": "2026-07-03T14:03:06.7415155+08:00",
+      "size": 21658,
+      "sha256": "baebbe8fdc97386d5484fe2b5bd3829f240abffdaac3f81deb9851cbbc83de37",
+      "status": "processed"
+    }
+  ]
+}

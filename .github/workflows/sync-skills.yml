@@ -1,0 +1,28 @@
+﻿name: Sync PatSnap SkillHub
+on:
+  schedule:
+    - cron: "20 */12 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 智慧芽竞品监测平台
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/sync-skills.mjs
+      - name: Commit changes
+        run: |
+          git config user.name "skillhub-sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/skills.json
+          git diff --cached --quiet || git commit -m "chore: sync PatSnap SkillHub"
+          git push

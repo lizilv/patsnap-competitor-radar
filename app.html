@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Opportunity｜智慧芽热点需求与解决方案平台</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./radar-iteration.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">O</span><div><b>Opportunity</b><small>热点需求解决方案</small></div></div>
+    <nav id="nav">
+      <button class="active" data-page="overview"><span>⌂</span>机会总览</button>
+      <button data-page="hotspots"><span>◉</span>行业热点</button>
+      <button data-page="pains"><span>◇</span>用户痛点</button>
+      <button data-page="solutions"><span>✦</span>解决方案</button>
+      <button data-page="content"><span>✎</span>内容工作台</button>
+      <button data-page="leads"><span>◎</span>线索与效果</button>
+    </nav>
+    <div class="admin-label">管理</div>
+    <button class="admin-link" data-page="sync"><span>↻</span>数据与同步</button>
+    <div class="sync-mini"><i></i><div><b>每日自动同步</b><small id="miniSync">正在读取 SkillHub 数据</small></div></div>
+  </aside>
+
+  <main>
+    <header>
+      <div><p class="eyebrow">HOTSPOT-TO-SOLUTION ENGINE</p><h1 id="pageTitle">机会总览</h1></div>
+      <label class="global-search">⌕ <input id="globalSearch" placeholder="搜索热点、行业、痛点或 Skill"></label>
+    </header>
+
+    <section class="page active" id="overview">
+      <div class="hero">
+        <div><span class="live">今日增长机会</span><h2>不止看见热点，<br>还要知道<strong>该为谁解决什么</strong></h2><p>把行业事件翻译成用户痛点，匹配智慧芽 Skill 组成轻解决方案，再转化为内容与留资入口。</p><button class="primary" data-jump="pains">从用户痛点开始</button></div>
+        <div class="hero-flow"><span>行业热点</span><b>→</b><span>用户痛点</span><b>→</b><span>Skill 方案</span><b>→</b><span>内容钩子</span></div>
+      </div>
+      <div class="metrics">
+        <article><span>SkillHub 能力</span><b id="skillCount">100</b><small>每日自动同步</small></article>
+        <article><span>重点用户群</span><b>3</b><small>研发 / 知产 / 生物医药</small></article>
+        <article><span>高潜热点</span><b id="hotspotCount">6</b><small>已完成业务影响解析</small></article>
+        <article><span>轻解决方案</span><b id="solutionCount">6</b><small>可直接生成内容</small></article>
+      </div>
+      <div class="section-head"><div><h2>今日优先机会</h2><p>按热点强度、痛点相关度、Skill 交付性与转化潜力排序</p></div><button class="secondary" data-jump="hotspots">查看全部热点</button></div>
+      <div class="opportunity-grid" id="opportunityGrid"></div>
+    </section>
+
+    <section class="page" id="hotspots">
+      <div class="section-head"><div><h2>行业热点</h2><p>从事件事实继续解析到受影响用户、业务痛点和可行动方案</p></div><div class="filters" id="industryFilters"></div></div>
+      <div class="hotspot-list" id="hotspotList"></div>
+    </section>
+
+    <section class="page" id="pains">
+      <div class="matcher">
+        <span class="live">需求匹配器</span><h2>先说你是谁、遇到了什么问题</h2><p>平台会从行业、角色、工作阶段、痛点和预期结果五层匹配智慧芽能力。</p>
+        <div class="matcher-form">
+          <label>用户角色<select id="roleSelect"></select></label>
+          <label>所在行业<select id="industrySelect"></select></label>
+          <label>工作阶段<select id="stageSelect"></select></label>
+        </div>
+        <label class="problem-input">当前最想解决的问题<textarea id="problemInput" placeholder="例如：立项前不知道同行是否已经布局，担心项目做半年才发现重复"></textarea></label>
+        <button class="primary" id="matchButton">匹配痛点与解决方案</button>
+      </div>
+      <div id="matchResult" class="match-result empty-state">选择角色并描述问题后，这里会给出痛点判断、Skill 组合与留资钩子。</div>
+    </section>
+
+    <section class="page" id="solutions">
+      <div class="section-head"><div><h2>解决方案中心</h2><p>按客户希望获得的结果组织，而不是展示一长串工具名称</p></div><label class="inline-search">⌕ <input id="skillSearch" placeholder="搜索 Skill 或能力"></label></div>
+      <div class="outcome-tabs" id="outcomeTabs"></div>
+      <div class="solution-layout"><div id="solutionCards" class="solution-cards"></div><aside class="skill-panel"><div class="skill-panel-head"><div><h3>智慧芽 SkillHub</h3><p id="skillMeta">读取中</p></div><a href="https://open.zhihuiya.com/marketplace/agent-skills" target="_blank" rel="noopener">官方平台 ↗</a></div><div id="skillList" class="skill-list"></div></aside></div>
+    </section>
+
+    <section class="page" id="content">
+      <div class="content-layout">
+        <section class="content-form"><span class="live">文章初稿生成器</span><h2>把一个热点变成可转化的话题</h2>
+          <label>选择热点<select id="contentHotspot"></select></label>
+          <label>目标用户<select id="contentRole"></select></label>
+          <label>渠道<select id="contentChannel"><option>小红书</option><option>微信公众号</option><option>知乎</option><option>销售朋友圈</option></select></label>
+          <button class="primary" id="draftButton">生成文章初稿</button>
+        </section>
+        <section id="draftResult" class="draft-result empty-state">生成后将依次呈现：事实摘要、业务影响、标题、正文结构、浅层解决方案与留资钩子。</section>
+      </div>
+    </section>
+
+    <section class="page" id="leads">
+      <div class="section-head"><div><h2>线索与效果</h2><p>记录用户为什么而来，而不只是留下一个联系方式</p></div><span class="tag">本地原型数据</span></div>
+      <div class="metrics"><article><span>钩子领取</span><b>328</b><small>近 30 天</small></article><article><span>有效留资</span><b>76</b><small>有效率 23.2%</small></article><article><span>高意向用户</span><b>21</b><small>已有明确业务问题</small></article><article><span>最热痛点</span><b class="text-metric">立项重复</b><small>研发负责人</small></article></div>
+      <div class="panel"><h3>线索应记录的需求标签</h3><div class="lead-schema"><span>行业</span><span>用户角色</span><span>工作阶段</span><span>具体痛点</span><span>触发热点</span><span>匹配 Skill</span><span>领取内容</span><span>意向等级</span></div></div>
+    </section>
+
+    <section class="page" id="sync">
+      <div class="section-head"><div><h2>数据与同步</h2><p>官方字段自动更新，运营标注独立保存，不会被覆盖</p></div><span class="status-ok">● 每日同步已配置</span></div>
+      <div class="sync-grid">
+        <article><span>当前 Skill 总数</span><b id="syncCount">100</b></article>
+        <article><span>官方分类</span><b>3</b></article>
+        <article><span>同步频率</span><b>每天 1 次</b></article>
+        <article><span>上次同步</span><b id="syncDate">初始化</b></article>
+      </div>
+      <div class="panel"><h3>同步规则</h3><ol><li>每天定时读取 SkillHub 全部分页。</li><li>识别新增、内容更新和下架状态。</li><li>保留人工维护的用户、行业、痛点和内容钩子标签。</li><li>同步失败时沿用上一个成功版本，不让前台数据中断。</li></ol><p class="note">GitHub Actions 文件已加入项目。首次推送后需要在仓库中启用 Actions 写权限。</p></div>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="./app.js"></script>
+  <script src="./radar-iteration.js"></script>
+</body>
+</html>

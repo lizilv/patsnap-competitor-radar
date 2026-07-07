@@ -1,0 +1,20 @@
+{
+  "meta": {"total": 100, "syncedAt": "2026-07-06", "source": "https://open.zhihuiya.com/marketplace/agent-skills", "status": "seed"},
+  "skills": [
+    {"id":"triz-functional-search","name":"triz-functional-search","category":"研发工程","description":"基于TRIZ理论进行功能抽象和跨领域类比，帮助研发人员寻找创新解决方案。","url":"https://open.zhihuiya.com/marketplace/agent-skills/triz-functional-search"},
+    {"id":"ceae-skill","name":"ceae-skill","category":"研发工程","description":"通过第一性原理、5Why和跨专业TRIZ小组定位硬件参数无法达标的根因。","url":"https://open.zhihuiya.com/marketplace/agent-skills/ceae-skill"},
+    {"id":"technology-insight-analysis","name":"technology-insight-analysis","category":"知识产权","description":"执行技术路线、竞争格局和战略机会分析，生成管理层可读的可视化报告。","url":"https://open.zhihuiya.com/marketplace/agent-skills/technology-insight-analysis"},
+    {"id":"patent-project-proposal","name":"patent-project-proposal","category":"知识产权","description":"围绕研发立项执行专利检索和七大模块分析，形成数据驱动的项目立项报告。","url":"https://open.zhihuiya.com/marketplace/agent-skills/patent-project-proposal"},
+    {"id":"patent-research-analyst","name":"patent-research-analyst","category":"知识产权","description":"完成科研立项的多轮专利检索、技术路线、查新与FTO风险分析。","url":"https://open.zhihuiya.com/marketplace/agent-skills/patent-research-analyst"},
+    {"id":"patent-application-evaluation-assistant","name":"patent-application-evaluation-assistant","category":"知识产权","description":"检查交底材料、执行查新并评估中美欧专利申请可行性。","url":"https://open.zhihuiya.com/marketplace/agent-skills/patent-application-evaluation-assistant"},
+    {"id":"generic-fto-report","name":"generic-fto-report","category":"知识产权","description":"根据产品风险点与检索式生成可追溯的通用行业FTO报告。","url":"https://open.zhihuiya.com/marketplace/agent-skills/generic-fto-report"},
+    {"id":"competitor-patent-landscape","name":"competitor-patent-landscape","category":"知识产权","description":"分析竞争对手重点专利布局、核心外围策略并生成报告。","url":"https://open.zhihuiya.com/marketplace/agent-skills/competitor-patent-landscape"},
+    {"id":"innovation-radar","name":"innovation-radar","category":"研发工程","description":"从研发周报、会议纪要和实验记录中发现潜在创新点并给出保护建议。","url":"https://open.zhihuiya.com/marketplace/agent-skills/innovation-radar"},
+    {"id":"tech-evolution-analysis","name":"tech-evolution-analysis","category":"研发工程","description":"基于TRIZ进化路线、专利与论文分析产品进化方向、空白点和跨域类比。","url":"https://open.zhihuiya.com/marketplace/agent-skills/tech-evolution-analysis"},
+    {"id":"pharma-project-initiation-report","name":"pharma-project-initiation-report","category":"生物医药","description":"针对药物、靶点或适应症完成管线、专利、临床、交易和市场立项调研。","url":"https://open.zhihuiya.com/marketplace/agent-skills/pharma-project-initiation-report"},
+    {"id":"pharma-conference-insight-report","name":"pharma-conference-insight-report","category":"生物医药","description":"解析医药顶会数据并形成技术趋势、竞争格局、BD信号和战略建议。","url":"https://open.zhihuiya.com/marketplace/agent-skills/pharma-conference-insight-report"},
+    {"id":"patsnap-lifescience-target-intelligence_zh","name":"靶点情报","category":"生物医药","description":"调研靶点生物学、成药性、研发管线、适应症及相关药物。","url":"https://open.zhihuiya.com/marketplace/agent-skills/patsnap-lifescience-target-intelligence_zh"},
+    {"id":"patsnap-lifescience-company-profiling_zh","name":"医药公司画像","category":"生物医药","description":"分析制药公司的融资、研发管线、交易和重点专利布局。","url":"https://open.zhihuiya.com/marketplace/agent-skills/patsnap-lifescience-company-profiling_zh"},
+    {"id":"cross-border-patent-risk-screen","name":"cross-border-patent-risk-screen","category":"知识产权","description":"对跨境电商产品进行外观、发明和实用新型三类专利风险初筛。","url":"https://open.zhihuiya.com/marketplace/agent-skills/cross-border-patent-risk-screen"}
+  ]
+}

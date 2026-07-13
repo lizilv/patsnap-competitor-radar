@@ -26,13 +26,8 @@ for(let pageNo=1;pageNo<=20;pageNo++){
   skills.push(...rows);
   const next=page.getByRole("button",{name:"下一页",exact:true});
   if(await next.isDisabled())break;
-  const currentFirstId=rows[0]?.id;
   await next.click();
-  await page.waitForFunction(
-    previousId=>document.querySelector('a[href*="/marketplace/agent-skills/"]')?.getAttribute("href")?.split("/").filter(Boolean).pop()!==previousId,
-    currentFirstId,
-    {timeout:30000}
-  );
+  await page.waitForTimeout(1000);
 }
 await browser.close();
 const unique=[...new Map(skills.map(x=>[x.id,x])).values()].map(x=>{

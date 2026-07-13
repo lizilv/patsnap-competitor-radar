@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: "20 */12 * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-skills.yml"
+      - "scripts/sync-skills.mjs"
 permissions:
   contents: write
 jobs:

@@ -8,9 +8,6 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: 智慧芽竞品监测平台
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

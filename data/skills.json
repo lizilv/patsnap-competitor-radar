@@ -1,11 +1,19 @@
 {
   "meta": {
-    "total": 107,
+    "total": 108,
     "syncedAt": "2026-08-20",
     "source": "https://open.zhihuiya.com/marketplace/agent-skills",
     "status": "success"
   },
   "skills": [
+    {
+      "id": "smart-document-parser",
+      "name": "smart-document-parser",
+      "description": "通过 Smart Document 正式 REST API 上传并解析图片、PDF 和 Office 文档，执行版面检测与 OCR，返回 Markdown 或结构化页面区域。\n当用户要求读取、提取、总结、翻译或分析 png、jpg、jpeg、pdf、doc、docx、ppt、pptx、xls、xlsx 文件中的正文、表格、公式、图片或坐标信息时使用本技能。",
+      "category": "研发工程",
+      "url": "https://open.zhihuiya.com/marketplace/skill-hub/smart-document-parser",
+      "annotations": {}
+    },
     {
       "id": "target-drug-bd-assessment",
       "name": "target-drug-bd-assessment",

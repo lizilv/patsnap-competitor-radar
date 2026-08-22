@@ -1,7 +1,5 @@
 ﻿name: Sync PatSnap SkillHub
 on:
-  schedule:
-    - cron: "20 */12 * * *"
   workflow_dispatch:
   push:
     paths:
